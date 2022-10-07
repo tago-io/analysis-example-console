@@ -11,15 +11,15 @@
 const { Analysis } = require("@tago-io/sdk");
 
 // The function myAnalysis will run when you execute your analysis
-function myAnalysis(context, scope) {
+async function myAnalysis(context, scope) {
   // This will log "Hello World" at the TagoIO Analysis console
-  context.log("Hello World");
+  console.log("Hello World");
 
   // This will log the context to the TagoIO Analysis console
-  context.log("Context:", context);
+  console.log("Context:", context);
 
   // This will log the scope to the TagoIO Analysis console
-  context.log("my scope:", scope);
+  console.log("my scope:", scope);
 }
 
 module.exports = new Analysis(myAnalysis);
